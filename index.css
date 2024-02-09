@@ -41,6 +41,7 @@ header .userHeader img {
   border: 1px solid #fff;
   border-radius: 50%;
   display: none;
+  transition: 0.5s;
 }
 
 header .userHeader a {
@@ -50,7 +51,7 @@ header .userHeader a {
   transition: 0.5s;
 }
 
-header .userHeader a:hover {
+header .userHeader img:hover,a:hover {
   transform: scale(1.3);
 }
 

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="userProfile.css">
+    <script src="/hooks/route-guard.js"></script>
+    <title>User Profile</title>
+</head>
+<body>
+    <header>
+        <h1>Administrar Perfil</h1>
+        <div class="userHeader">
+          <a class="loginButton" href="/login/login.html">LogIn</a>
+          <a href="/userProfile/userProfile.html"><img src="" alt="profilePhoto" /></a>
+          <a class="logoutButton" href="#">LogOut</a>
+        </div>
+      </header>
+      <main>
+        <section class="amigos">
+          <h2>Lista de Amigos</h2>
+          <ul id="lista-amigos"></ul>
+          <form id="form-agregar-amigo">
+            <label for="nombre-amigo">Buscar amigo:</label>
+            <input type="text" id="nombre-amigo" name="nombre-amigo">
+            <button type="submit">Agregar</button>
+          </form>
+        </section>
+        <section class="solicitudes">
+          <h2>Solicitudes de Amistad</h2>
+          <ul id="lista-solicitudes"></ul>
+        </section>
+      </main>
+    <script src="userProfile.js" type="module"></script>
+</body>
+</html>

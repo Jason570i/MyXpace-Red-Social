@@ -48,7 +48,6 @@ userLogout.addEventListener("click", () => {
 //functions
 async function renderPosts() {
   const data = await getData(`${URLPosts}?_embed=user`);
-  console.log(data);
   data.forEach((post) => {
     const divPost = document.createElement("div");
     divPost.classList.add("post");
@@ -76,7 +75,7 @@ async function renderPosts() {
         const divButtons = document.createElement("div");
         divButtons.classList.add("postButtons");
         divPost.appendChild(divButtons);
-
+        
         const buttonEdit = document.createElement("button");
         buttonEdit.textContent = "Edit Post";
         buttonEdit.classList.add("btn", "btn-edit");
