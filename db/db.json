@@ -1,0 +1,27 @@
+{
+  "users": [
+    {
+      "id": "6a12",
+      "image": "https://i.imgflip.com/6z86mm.png",
+      "name": "Jeison",
+      "email": "jeisonortiz1516@gmail.com",
+      "password": "contra"
+    },
+    {
+      "id": "7c83",
+      "image": "https://i.imgflip.com/6z86mm.png",
+      "name": "Jason",
+      "email": "jasonortiz1516@gmail.com",
+      "password": "contra"
+    },
+    {
+      "id": "97cd",
+      "image": "https://i.imgflip.com/6z86mm.png",
+      "name": "aleja",
+      "email": "aleja1516@gmail.com",
+      "password": "12314"
+    }
+  ],
+  "posts": [],
+  "friends": []
+}

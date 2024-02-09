@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="login.css">
+    <link rel="shortcut icon" href="https://i.imgflip.com/6z86mm.png" type="image/x-icon">
+    <script src="/hooks/route-guard.js"></script>
+    <title>Login</title>
+  </head>
+  <body>
+    <div class="container">
+      <form id="formLogin">
+        <h1>Log In</h1>
+        <div class="input-container">
+          <label for="email">Email</label>
+          <input type="email" id="emailLogin" required/>
+        </div>
+        <div class="input-container">
+          <label for="password">Password</label>
+          <input type="password" id="passwordLogin" required/>
+        </div>
+        <div class="input-container">
+          <button type="submit">LogIn</button>
+        </div>
+      </form>
+    </div>
+    <script src="login.js" type="module"></script>
+  </body>
+</html>
