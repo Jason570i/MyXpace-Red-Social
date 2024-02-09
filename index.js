@@ -7,7 +7,7 @@ const newPostSection = document.querySelector(".newPost");
 const formPost = document.querySelector("#formPost");
 const textAreaPostInput = document.querySelector("#textArea");
 const imagePostInput = document.querySelector("#image");
-const userNameHeader = document.querySelector(".userHeader h2");
+const userNameHeader = document.querySelector(".userHeader .loginButton");
 const userImgHeader = document.querySelector(".userHeader img");
 const userLogout = document.querySelector(".userHeader .logoutButton");
 const postContainer = document.querySelector("#post-container");
@@ -17,7 +17,9 @@ document.addEventListener("DOMContentLoaded", async () => {
   if (dataUser) {
     userNameHeader.textContent = `User: ${dataUser[0].name}`;
     userImgHeader.src = dataUser[0].image;
-  }else{
+    userImgHeader.style.display = "block";
+    userLogout.style.display = "block";
+  } else {
     newPostSection.style.display = "none";
   }
   await renderPosts();
@@ -40,6 +42,7 @@ formPost.addEventListener("submit", (e) => {
 
 userLogout.addEventListener("click", () => {
   localStorage.removeItem("user");
+  window.location.href = "/index.html";
 });
 
 //functions
@@ -67,6 +70,7 @@ async function renderPosts() {
     postAuthor.setAttribute("author-id", post.user.id);
     postAuthor.textContent = `Posted by: ${post.user.name}`;
     divAuthor.appendChild(postAuthor);
+
     if (dataUser) {
       if (dataUser[0].id === post.user.id) {
         const divButtons = document.createElement("div");
