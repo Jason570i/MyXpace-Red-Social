@@ -5,21 +5,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="index.css" />
     <script src="/hooks/route-guard.js"></script>
-    <title>Social Media</title>
+    <title>MyXpace</title>
   </head>
   <body>
     <header>
-      <h1>Social Media</h1>
+      <h1>MyXpace</h1>
       <div class="userHeader">
-        <h2>Logeado como jeison</h2>
+        <a href="/login/login.html">LogIn</a>
         <img src="" alt="profilePhoto" />
+        <a class="logoutButton" href="#">LogOut</a>
       </div>
     </header>
     <main>
       <section class="newPost">
         <h2>New Post</h2>
         <form id="formPost">
-          <textarea name="texto" placeholder="Post Something" id="textArea"></textarea>
+          <textarea
+            name="texto"
+            placeholder="Post Something"
+            id="textArea"
+          ></textarea>
           <div>
             <label for="image">ImgURL</label>
             <input type="text" id="image" placeholder="Post an image" />
@@ -29,7 +34,9 @@
       </section>
       <section class="feed">
         <h2>Feed</h2>
-        <div class="post-container" id="post-container"></div>
+        <div class="post-container" id="post-container">
+          
+        </div>
       </section>
     </main>
     <script src="/index.js" type="module"></script>

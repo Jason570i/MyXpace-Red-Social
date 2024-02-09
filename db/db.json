@@ -22,6 +22,19 @@
       "password": "12314"
     }
   ],
-  "posts": [],
+  "posts": [
+    {
+      "id": "9fb6",
+      "content": "comida colombiana, paisa, arepa, frijoles",
+      "image": "https://img.freepik.com/foto-gratis/arreglo-comida-deliciosa-alto-angulo_23-2148708199.jpg",
+      "userId": "6a12"
+    },
+    {
+      "id": "b8d5",
+      "content": "I'm programing in js",
+      "image": "https://img.freepik.com/foto-gratis/personas-generando-imagenes-usando-inteligencia-artificial-computadora-portatil_23-2150794312.jpg",
+      "userId": "6a12"
+    }
+  ],
   "friends": []
 }
