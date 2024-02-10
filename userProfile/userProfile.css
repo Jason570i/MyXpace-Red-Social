@@ -72,21 +72,21 @@ ul {
   padding: 0;
 }
 
-#lista-amigos li {
+.friend-list li {
   padding: 5px;
   border-bottom: 1px solid #ccc;
 }
 
-#form-agregar-amigo {
+.formFriendList {
   margin-top: 10px;
 }
 
-#nombre-amigo {
+.friendName {
   width: 200px;
   padding: 5px;
 }
 
-#lista-solicitudes li {
+.friendRequestList li {
   padding: 5px;
   border-bottom: 1px solid #ccc;
 }
