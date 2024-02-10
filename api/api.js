@@ -25,3 +25,29 @@ export async function createData(URL, data) {
     console.log(error);
   }
 }
+
+export async function updateData(URL,id, data) {
+  try {
+    const response = await fetch(`${URL}/${id}`, {
+      method: "PUT",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(data),
+    });
+    const dataSaved = await response.json();
+    return dataSaved;
+  } catch (error) {
+    console.log(error);
+  }
+}
+
+export async function deleteData(URL, id) {
+  try {
+    const response = await fetch(`${URL}/${id}`, {
+      method: "DELETE"
+    });
+    const dataSaved = await response.json();
+    return dataSaved;
+  } catch (error) {
+    console.log(error);
+  }
+}

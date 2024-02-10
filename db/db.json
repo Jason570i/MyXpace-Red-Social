@@ -42,5 +42,17 @@
       "userId": "97cd"
     }
   ],
-  "friends": []
+  "friends": [
+    {
+      "id": "78ed",
+      "userId": "6a12",
+      "userRequest": [
+        {
+          "userId": "97cd"
+        }
+      ],
+      "userReceived": [],
+      "userApproved": []
+    }
+  ]
 }
