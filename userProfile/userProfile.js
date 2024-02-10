@@ -8,14 +8,17 @@ let timer;
 const userNameHeader = document.querySelector(".userHeader .loginButton");
 const userImgHeader = document.querySelector(".userHeader img");
 const userLogout = document.querySelector(".userHeader .logoutButton");
-const friendName = document.querySelector("#friendName");
+const friendNameInput = document.querySelector("#friendName");
+const addFriend = document.querySelector("#add-friend-list");
 
+//events
 document.addEventListener("DOMContentLoaded", () => {
   if (dataUser) {
     userNameHeader.textContent = `User: ${dataUser[0].name}`;
     userImgHeader.src = dataUser[0].image;
     userImgHeader.style.display = "block";
     userLogout.style.display = "block";
+    renderUsers();
   } else {
     window.location.href = "/index.html";
   }
@@ -26,7 +29,7 @@ userLogout.addEventListener("click", () => {
   window.location.href = "/index.html";
 });
 
-friendName.addEventListener("input",()=>{
+friendNameInput.addEventListener("input",()=>{
     clearTimeout(timer)
     timer = setTimeout(async () => {
         const data = await getData(`${URLUsers}?name=${friendName.value}`);
@@ -34,5 +37,21 @@ friendName.addEventListener("input",()=>{
     }, 500);
 })
 
+//functions
+async function renderUsers() {
+    const data = await getData(URLUsers);
+    data.forEach(user => {
+        const li = document.createElement("li");
+        const pName = document.createElement("p");
+        pName.textContent = user.name;
+        li.appendChild(pName);
+
+        const addButton = document.createElement("button");
+        addButton.setAttribute("user-id",user.id);
+        addButton.textContent = "Add Friend"
+        li.appendChild(addButton);
+        addFriend.appendChild(li)
+    });
+}
 
 
